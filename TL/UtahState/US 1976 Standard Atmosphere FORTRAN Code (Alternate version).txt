@@ -1,0 +1,285 @@
+                program standard
+c      given the pressure altitude, this subroutine evaluates the 
+c      various atmospheric parameters
+c
+             implicit none
+          double precision mu, hp, pamb, tamb, rhoamb, c
+          double precision thermk, nu
+c
+          print*, 'please enter the desired pressure altitude'
+               read(5,*) hp
+c
+        print*, ' '
+c *********************************************************************
+c            given altiitude evaluate pressure
+
+c              COMPUTE ATMOSPHERIC PROPERTIES 
+               call  stnd(hp,pamb,tamb,mu,rhoamb,c,thermk, nu)
+          print*,'for altitude:',hp,' feet'
+          print*,'the standard atmospheric quantities are:'
+          print*,'pamb=',pamb, ' psf.'
+          print*,'tamb=',tamb, ' Deg. R.'
+          print*,'mu=',mu,' lbf-sec/ft**2'
+          print*,'rho=',rhoamb, ' lbm/ft**3'
+          print*,'sonic velocity=',c, ' ft/sec'
+          print*,'thermal conductivity=',thermk,' btu/ft-sec deg. R'
+c
+               stop
+               end
+c            
+c *******************************************************************
+c
+        subroutine stnd(h,p,trank,mu,rho,c,thermk, nu)
+c        
+           implicit none  
+           double precision mu,h, p, trank, rho, c, thermk
+           double precision hkm, t, pmb, sqrt, nu
+           integer nbrk 
+           parameter (nbrk=7)
+           double precision  tbrk(nbrk),thbrk(nbrk)
+c
+           intrinsic sqrt
+           external tpmet, binsrh
+c          
+c*******************************************
+c
+c         this subroutine calculates ambient pressure (psf),
+c         temperature (deg R), dynamic viscosity, lbf-sec/ft,
+c         kinematic viscosity ft**2/ sec, local sound speed,
+c         and thermal conductivity
+c         --given the altitude 
+c
+              save tbrk,thbrk
+c
+c            define thermal conductivity breakpoints
+c                     temperature 
+          data tbrk/350.,402.,492.,582.,672.,852.,1032./           
+c                     thermal conductivity
+          data thbrk/2.778e-06,3.278e-06,3.889e-06,
+     +    4.472e-06,4.972e-06,5.889e-06,6.889e-06/     
+c
+c             compute pressure and temperature
+c       
+c                  convert h to kilometers
+               hkm=h/3280.8
+c                  compute temperature in deg. kelvin and 
+c                  pressure in millibars
+                call  tpmet(hkm,t,pmb)
+c         
+c           convert temperature to deg Rankine
+               trank=(9./5.)*t
+c               
+c  calculate dynamic viscosity, mu in nt-sec/meter squared
+         mu = (1.458e-6 * (t ** 1.5)) / (t + 110.4)
+c         
+c           convert pressure to psf
+               p=pmb*(2116.2166/1013.25)
+c           convert mu to lbf-second/foot squared      
+         mu=mu/47.880258
+c         
+c        calculate the density for the given altitude
+              rho=p/(53.3*trank)
+c         
+c            compute the kinematic viscosity         
+c
+          nu=32.1742*(mu)/(rho)
+c 
+c            compute the local sonic velocity
+c                    in ft/sec
+              c=49.02*sqrt(trank)
+c              
+c                compute thermal conductivity in
+c                 btu/(ft-sec-deg r.)
+c
+                call  binsrh(tbrk,thbrk,nbrk,trank,thermk)
+c
+       return
+       end
+c       
+c
+c
+                   subroutine tpmet(h,t,p)
+c                   
+c              subroutine uses 1976 metric standard atmosphere to compute
+c              temperature in deg k. and pressure in millibars
+c              given the altitude in kilometers
+c
+                implicit none
+                double precision gprime, rstar, Mo, h, t, p
+                integer j, index
+                double precision expn, exp, term1, term2
+c
+          parameter (gprime=9.80665,Rstar=8.31432,Mo=28.9644)
+c           
+c                gprime is the acceleration of gravity at sea level
+c                in M/sec**2
+c        
+c                Rstar is the gas constant in N meters/ kMol deg k
+c
+c                Mo is the molecular weight of air in Kg/kMol
+c
+c                define  breakpoint arrays    
+c                Hmb -- altitude, Tmb -- temperature 
+c                Lmb -- lapse rate, Pmb -- pressure
+                 reaL  Hmb(8),Tmb(8),Lmb(8),Pmb(8)
+c                                   
+c                   ISO is a logical variable which instructs
+c                   the code to switch from isothermal 
+c                   code logic to variable temperature code
+c                   logic
+                 logical  ISO
+c                 
+c                   initialize parameters
+c
+      data ISO/.true./
+c
+      data Hmb/0.,11.,20.,32.,47.,51.,71.,84.5/
+c      
+      data Tmb/288.15, 216.65, 216.65, 228.65, 
+     +         270.65, 270.65, 214.65, 187.65/ 
+c     
+      data Pmb/1013.25, 226.32, 54.748, 8.6801,
+     +    1.1090, 0.66938, 0.039564, 0.0039814/  
+c       
+      data Lmb/-6.5, 0.0, 1.0, 2.8, 0.0, -2.8, -2.0, -2.0/
+c       
+c                find breakpoint region
+c
+             do  1  j=1,8
+  1          if(h.gt.Hmb(j)) index=j
+c             
+             print*, 'INDEX=',index
+c             
+c             check to see whether or not this is an isothermal region
+c
+              if(index.eq.2.or.index.eq.5) then
+              ISO=.true.
+              else
+              ISO=.false.
+              endif
+c         
+c             compute pressure and temperature
+c 
+      if(ISO) then
+c                              pressure              
+         expn=gprime*Mo*(h-Hmb(index))/(Rstar*Tmb(index) )
+         p=Pmb(index)*exp(-expn)
+c                              temperature                
+         t=Tmb(index)
+c                
+      else
+c                              pressure              
+         expn=gprime*Mo/(Rstar*Lmb(index)) 
+         Term1=Tmb(index)+Lmb(index)*(h-Hmb(index))
+         term2=Tmb(index)/term1
+         p=Pmb(index)*(term2**expn)
+c                              temperature                
+         t=Term1
+c              
+      endif
+c
+          return
+          end
+c
+C          
+C          
+C
+
+      SUBROUTINE BINSRH(XBRK,YBRK,NBRK,X,Y)
+C
+           IMPLICIT NONE
+C
+C          THIS IS A BINARY SEARCH ALGORITHM
+C          THE ALGORITHM LOCATES THE APPROPRIATE TABLE
+C          ELEMENTS FOR THE ABSCISSA (XBRK), AND USES LINEAR
+C          INTERPOLATION TO SOLVE FOR THE ORDINATE  Y.
+C
+       DOUBLE PRECISION   XBRK(*),YBRK(*), X, Y
+       DOUBLE PRECISION   XMIN, XMAX
+       INTEGER NBRK, NMAX, NMIN, NTOP, NBOT, NHALF
+       EXTERNAL INTERPL
+C
+C     CHECK FOR OVERRANGE ON THE TABLE
+C
+       XMIN = XBRK(1)
+       XMAX = XBRK(NBRK) 
+      IF(X.LT.XBRK(1).OR.X.GT.XBRK(NBRK))  THEN
+C    
+c       WRITE(99,100)  XBRK(1),XBRK(NBRK),X
+       PRINT100,  XBRK(1),XBRK(NBRK),X
+  100 FORMAT(1X,'VALUE OF X IS OUTSIDE OF TABLE'/1X,
+     +'XMIN,XMAX,X=',3(F11.4,1X)/)
+C     
+       IF(X.LT.XBRK(1) )  THEN
+       WRITE(99,*) ' X LESS THAN XMIN TABLE VALUE'
+       WRITE(99,*) 'VALUE OF XMIN IS USED' 
+       X=XMIN
+       ELSE
+       WRITE(99,*) ' X GREATER THAN XMAX TABLE VALUE'
+       WRITE(99,*) ' VALUE OF XMAX IS USED'
+       X=XMAX
+       ENDIF
+C       
+       ENDIF
+C      NOTE: TABLE MUST BE IN ASCENDING ORDER FOR THE
+C      ABSCISSA
+C
+C      INITIALIZE
+       NBOT=1
+       NTOP=NBRK
+C
+C      BEGIN SEARCH
+C
+  10   NHALF=(NTOP-NBOT)/2+NBOT
+       IF(XBRK(NBOT).LE.X.AND.X.LE.XBRK(NHALF)) THEN
+C
+       NBOT=NBOT
+       NTOP=NHALF
+C
+       ELSE
+C
+       NBOT=NHALF
+       NTOP=NTOP
+C
+       ENDIF
+       IF((NBOT+1).LT.NTOP)   THEN
+       GO  TO  10
+       ENDIF
+C
+C          INTERPOLATE OFF OF RESULTS
+      NMAX=NTOP
+      NMIN=NBOT
+C
+      CALL  INTERPL(XBRK,YBRK,NMIN,NMAX,X,Y)
+C
+  99  CONTINUE
+C
+      RETURN
+      END
+C
+C
+C
+      SUBROUTINE INTERPL(XBRK,YBRK,NMIN,NMAX,X,Y)
+C
+      IMPLICIT NONE
+C      
+C     SUBROUTINE PERFORMS LINEAR INTERPOLATION ON THE INPUT
+C     ARRAY'S--XBRK ARE THE ABSCISSA AND YBRK ARE
+C     THE ORDINATE
+      DOUBLE PRECISION  XBRK(*),YBRK(*), X, Y, X1, X2, Y1, Y2, SLOPE
+      INTEGER NMIN, NMAX
+C
+      X1=XBRK(NMIN)
+      X2=XBRK(NMAX)
+C
+      Y1=YBRK(NMIN)
+      Y2=YBRK(NMAX)
+C
+      SLOPE=(Y2-Y1)/(X2-X1)
+      Y=(X-X1)*SLOPE+Y1
+C
+      RETURN
+      END
+C
+C
+C
