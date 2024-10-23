@@ -1,0 +1,10 @@
+problem    o/f=1,2,3,4,5,6,7,
+      rocket  equilibrium  tcest,k=3200
+  p,psia=100,200,300,400,500,600,
+  sup,ae/at=10,
+react  
+  oxid=O2 wt=100  t,k=285  
+  fuel=H2 wt=100  t,k=285  
+output  
+    plot p t h g s m cp gam mach aeat cf ivac isp o/f  
+end
