@@ -5,7 +5,6 @@ If you have an image of the thrust curve graph of a motor plus some standard inf
 In simplest terms, TCtracer opens an image file of the motor's thrust curve and lets you draw right on that image. 
 After drawing the thrust curve, you input some standard data on the motor and it will write out a RASP format motor data file. 
 TCTracer is written as a Java application and should run on all modern operating systems. 
-(I have tested it on Windows XP, Mac OS X and Linux.)
 
 
 --------------------------------------------------------------------------
