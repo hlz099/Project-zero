@@ -3,7 +3,7 @@ Cyclone
 
 Overview
 --------
-Cyclone is a script for generating and executing filament winding toolpaths. It was written for simple, 3-axis machines, (like my [Contraption](https://reilley.net/winder)) and currently only supports winding onto cylindrical mandrels. The gcode that it generates should work with many CNC controllers, but my machine utilizes a low-cost 3D printer main board running [Marlin](https://github.com/MarlinFirmware/Marlin) and the output may need to be modified slightly for other boards.
+Cyclone is a script for generating and executing filament winding toolpaths. It was written for simple, 3-axis machines, ([Contraption](https://reilley.net/winder)) and currently only supports winding onto cylindrical mandrels. The gcode that it generates should work with many CNC controllers, but my machine utilizes a low-cost 3D printer main board running [Marlin](https://github.com/MarlinFirmware/Marlin) and the output may need to be modified slightly for other boards.
 
 Download and Setup
 -------
