@@ -15,7 +15,7 @@ npm i
 
 Machine Configuration
 -------
-Future releases of Cyclone might include the ability to specify which gcode axis each machine axis is connected to, but for now, it is hardcoded to match my machine. The X axis is carriage movement, the Y axis is mandrel rotation, and the Z axis is delivery head rotation. Carriage coordinates are given in millimeters, so tune your steps/mm as usual for the X axis. The mandrel and delivery head are both rotational, which is not typical for the 3D printers that Marlin usually drives. The output for these axes is degrees rather than millimeters, so when configuring them, set the steps/mm to the steps/degree value from the motor manufacturer, also factoring in any gear ratios such that `Y360` produces a single complete mandrel rotation. 
+Future releases of Cyclone might include the ability to specify which gcode axis each machine axis is connected to. The X axis is carriage movement, the Y axis is mandrel rotation, and the Z axis is delivery head rotation. Carriage coordinates are given in millimeters, so tune your steps/mm as usual for the X axis. The mandrel and delivery head are both rotational, which is not typical for the 3D printers that Marlin usually drives. The output for these axes is degrees rather than millimeters, so when configuring them, set the steps/mm to the steps/degree value from the motor manufacturer, also factoring in any gear ratios such that `Y360` produces a single complete mandrel rotation. 
 
 Generating a Toolpath
 -----------
@@ -88,6 +88,3 @@ License
 -------
 Cyclone is released under the GNU GPL v3 license. The source code is distributed so you can build cool stuff with it, and with the hope of encouraging more hobbyist tinkering in this area that I find fascinating. 
 
-Contributing
-------------
-Cyclone is mostly purpose-built for my filament winder, but contributions are welcome if you find it useful and have ideas for improvements. Some larger projects could include adding support for 4 axis winders and tapered parts, the creation of a GUI, and generalization to support more winders/controllers.
