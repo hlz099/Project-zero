@@ -7,11 +7,11 @@ After drawing the thrust curve, you input some standard data on the motor and it
 TCTracer is written as a Java application and should run on all modern operating systems. 
 
 
---------------------------------------------------------------------------
+---------------
 There are five steps in using TCtracer to make a motor data file:
 
-1.Open Image loads an image file of the thrust curve to be traced.
-2.Setup Grid allows you to specify the grid values and drag the edges.
-3.Draw Points is used to draw the data points directly on the graph image.
-4.Motor Info brings up a dialog to enter basic information on the motor.
-5.Save Data saves the resulting RASP format simulator file.
+ 1).Open Image loads an image file of the thrust curve to be traced.
+ 2).Setup Grid allows you to specify the grid values and drag the edges.
+ 3).Draw Points is used to draw the data points directly on the graph image.
+ 4).Motor Info brings up a dialog to enter basic information on the motor.
+ 5).Save Data saves the resulting RASP format simulator file.
