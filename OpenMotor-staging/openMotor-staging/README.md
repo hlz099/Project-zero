@@ -7,7 +7,7 @@ Overview
 openMotor is an open-source internal ballistics simulator for rocket motor experimenters. The software estimates a rocket motor's chamber pressure and thrust based on propellant properties, grain geometry, and nozzle specifications. It uses the Fast Marching Method to determine how a propellant grain regresses, which allows the use of arbitrary core geometries.
 
 Current Features:
-* Metric and imperial units
+* Metric
 * Support for common grain geometries such as BATES, Finocyl, Star and more
 * Loading custom grain geometry from DXF files
 * A propellant editor that allows the user to enter the properties of as many propellants as they wish
@@ -69,7 +69,3 @@ The remaining user information, like propellant data and preferences, is stored 
 License
 -------
 openMotor is released under the GNU GPL v3 license. The source code is distributed so you can build cool stuff with it, and so you don't have to trust the calculations are being done correctly. Check for yourself (and file an issue ticket!) if you doubt the results.
-
-Contributing
-------------
-As openMotor is open source, one of the goals of the project is to have as many eyes on the code as possible. I believe this is the best way to avoid bugs and also the easiest way to get new features added to the software. If you have ideas on how to improve the program or find an error, please open an issue ticket for discussion or file a pull request if possible.
