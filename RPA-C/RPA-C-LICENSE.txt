@@ -1,0 +1,126 @@
+RPA-C License
+
+Terms and conditions for use
+
+Please read this License Agreement carefully before downloading or using the Software. By using all or any portion of the Software you accept all the terms and conditions of this License Agreement. If you do not agree with the terms and conditions of this License Agreement, then do not download or install or use this Software.
+1. Definitions
+
+"License" means the terms and conditions for use as defined by Articles 2 through 12 below.
+
+"Commercial License" means a License purchased by companies or organizations, including non-profit and government, for general commercial purposes.
+
+"Personal License" means a License purchased by natural person for general commercial purposes.
+
+"Academic License" means a License purchased by academic or educational institutions for educational purposes or non-commercial academic research.
+
+"Student License" means a License purchased by individual students and teachers for educational purposes.
+
+"Licensor" means the copyright owner or entity authorized by the copyright owner that is granting the License.
+
+"Licensee" or "You" means an individual or legal entity specified in the License Certificate, exercising permissions granted by this License.
+
+"Software" or "Licensed Software" means the software delivered by the Licensor under this License, available in binary form, including but not limited to (a) related explanatory written materials or files ("Documentation"); and (b) updates and additions, if any, licensed to you by Licensor (collectively, "Updates").
+
+"Trial Version of the Software" means a special version of the Software which can be used for the sole purpose of evaluating the Software for purchase. The Trial Version of the Software may (or may not) provide a limited functionality compared to Licensed Software.
+
+"Authorized User" means (a) if Licensee is an individual, solely Licensee; (b) if Licensee is a legal entity, any employee, independent contractor and other temporary worker authorized by Licensee to use the Software while performing duties within the scope of their employment or assignment.
+
+"Concurrent Authorized Users" means Authorized Users who use the Software simultaneously in accordance with the terms of this License.
+
+"License Certificate" means evidence of a license provided by Licensor to Licensee in electronic or printed form.
+
+"License Key" or "Product Key" means a license key consisting of a series of numbers and/or letters provided by Licensor to Licensee that enables a single Authorized User to use the Software at a time. Only Licensor and/or its representatives are permitted to produce License Keys for the Software.
+
+"Order" means a written (including electronic) purchase order relating to the Software and/or services procured.
+
+"License Fee" means the applicable fee for which You license the Software.
+
+"Delivery" mean the physical shipment of the Software to Licensee, or shipment by means of transferring electronically, or making a Software, including a License Key if applicable, available for electronic transfer (including, but not limited to Hypertext Transfer Protocol (HTTP) or File Transfer Protocol (FTP) download) by Licensee.
+
+"Non-commercial" means You are not getting compensated in any form for the products or services you provide using Licensed Software (i.e., You do not receive a salary, or funding, etc.)
+2. Evaluation and Conversion
+
+This License grants You a non-transferable, non-exclusive, limited right to use one copy of the Trial Version of the Software for 15 days without License Fee for the sole purpose of evaluating the Software for purchase.
+
+You may have the option to convert Your evaluation rights to subscription or perpetual rights, purchasing an appropriate License to a Software. If You are provided with a License Key to convert Your evaluation rights to subscription or perpetual rights, Your License Key is personal to You, and You are responsible for it. You may not share your License Key with others.
+
+During the evaluation, You will not tamper with, or attempt to circumvent or disable, any limiting function of the Trial Version of the Software.
+3. Grant of License Rights
+
+When You purchase a License to a Licensed Software, upon its Delivery You will have a non-exclusive and non-transferable right to do the following:
+
+- to use the Software for any purposes, unless Licensee purchased an Academic or Student License;
+- to use the Software solely for educational purposes or non-commercial academic research in any academic institution, if Licensee purchased an Academic License;
+- to use the Software solely for educational purposes, if Licensee purchased a Student License;
+- to install the Software and License Key for the Licensed Software on more than one computer system, as long as the specific number of Concurrent Authorized Users for which Licensee has paid the applicable License Fee is not exceeded.
+- to make a reasonable number of archival copies of the Licensed Software for backup purposes;
+- to perform the Software publicly; and
+- to display the Software publicly.
+
+4. Restrictions and Obligations of the Licensee
+
+The grant of the rights mentioned above is subject to some restrictions and obligations imposed on the Licensee. Those restrictions and obligations are the following:
+
+Licensee may not reverse engineer, decompile, disassemble, modify, resell, rent, lease, loan, create or prepare derivative works of, create a patent based on, or attempt to discover or modify in any way the underlying source code of the Software or any part thereof.
+
+Licensee may not use the Software in combination or conjunction with any third party product not properly licensed by Licensee.
+
+Licensee will not make copies of the License Key or allow copies of the License Key to be made by others, unless authorized by this License Agreement.
+
+Licensee will not tamper with, or attempt to circumvent or disable, any License Key or any time-limiting function of Software (this includes, for example, resetting the CPU time in order to extend the evaluation period or using a manipulated configuration to enable unauthorized copies of a License Key).
+
+Licensee shall keep intact all copyright, patent or trademarks notices and all notices that refer to the License and to the disclaimer of warranties. Licensee must include a copy of such notices and a copy of the License with a copy of the Software he/she makes for backup purposes.
+
+This License does not grant permission to use the trade names, trademarks, service marks, or names of the Licensor, except as required for reasonable and customary use in describing the origin of the Software and reproducing the content of the copyright notice.
+5. Chain of Authorship
+
+The original Licensor warrants that the copyright in the Software granted hereunder is owned by him/her or licensed to him/her and that he/she has the power and authority to grant the License.
+
+Each time You accept the License, the original Licensor grant You a license under the terms of this License.
+6. Limited Warranty
+
+This Software is subject to a limited warranty.
+
+Licensor warrants to Licensee that the physical medium on which this Software is delivered by the Licensor is free from defects in materials and workmanship under normal use, the Software will perform according to its documentation, and to the best of Licensor's knowledge Licensee's use of this Software according to the documentation is not an infringement of any third party's intellectual property rights. This limited warranty lasts for a period of ninety (90) days after Delivery.
+
+In no event does Licensor warrant that the Software is error free or that Licensee will be able to operate the Software without problems or interruptions.
+
+This warranty does not apply if the software (a) has been altered, except by Licensor, (b) has not been installed, operated, repaired, or maintained in accordance with instructions supplied by Licensor, (c) has been subjected to abnormal physical or electrical stress, misuse, negligence, or accident, or (d) is used in ultrahazardous activities.
+
+EXCEPT AS SPECIFIED IN THIS WARRANTY, ALL EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS, AND WARRANTIES INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ABSENCE OF DEFECTS OR ERRORS, CORRECTNESS, ACCURACY, RELIABILITY, NON-INFRINGEMENT OR ARISING FROM A COURSE OF DEALING, USAGE, OR TRADE PRACTICE, ARE HEREBY EXCLUDED TO THE EXTENT ALLOWED BY APPLICABLE LAW. THE SOFTWARE AND RELATED MATERIALS ARE PROVIDED "AS IS". LICENSOR DOES NOT WARRANT THE PERFORMANCE OR RESULTS YOU MAY OBTAIN BY YOUR USE OR INABILITY TO USE THE SOFTWARE OR THE DOCUMENTATION. This disclaimer is an essential part of the License and a condition for the grant of any rights to the Software.
+
+Some states may not allow the above exclusion or limitation of warranties, so the above exclusions or limitations may not apply to You. This warranty gives You specific legal rights. You may have other rights which vary from state to state or province to province.
+7. Disclaimer of Liability and Damages
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO ON WRITTING WILL THE LICENSOR BE LIABLE FOR ANY CONSEQUENTIAL OR INCIDENTAL, DIRECT OR INDIRECT, MATERIAL OR MORAL, SPECIAL, OR PUNITIVE DAMAGES OF ANY KIND, ARISING OUT OF THE LICENSE OR OF THE USE OF THE SOFTWARE, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF GOODWILL OR BUSINESS PROFITS, WORK STOPPAGE, HARDWARE FAILURE OR MALFUNCTION, LOSS OF DATA OR ANY COMMERCIAL DAMAGE, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. However, the Licensor will be liable under statutory product liability laws as far such laws apply to the Software.
+8. Term of validity and Termination
+
+This License is effective for the licensed generation (major version) of the software until terminated. Licensee may terminate this License at any time by destroying the Software, related documentation and all copies thereof.
+
+This License will terminate immediately without notice from Licensor if Licensee fails to comply with any provision of this License.
+
+Licensor has the right to terminate this License Agreement and Licensee's right to use this Software upon any material breach by Licensee.
+
+Upon termination, Licensee must destroy all copies of Software.
+9.Fees and Taxes
+
+The applicable License Fee is specified on the Licensor website or in the specific price proposal provided by Licensor or an authorized reseller. The payment terms and conditions for the License Fee payable to Licensor are specified on the Licensor website at the following URL: http://www.propulsion-analysis.com/RPA-C/pricing.htm ("Licensing and Pricing"). The payment terms and conditions for the License Fee payable to an authorized reseller are as specified by the specific authorized reseller.
+
+The License Fees listed may not include taxes; if Licensor is required to pay sales, use, property, value-added or other taxes based on the Software or services provided under this Agreement or on Licensee's use of Software or services, then such taxes shall be billed to and paid by Licensee. This section does not apply to taxes based on Licensor's income.
+
+Licensee shall make all payments in full within thirty (30) days from the date of the applicable invoice. Any amounts payable by Licensee that remain unpaid after the due date shall be subject to a late charge equal to 1.5% of the invoice amount per month from the due date until such amount is paid, or the maximum rate permitted by law if less.
+10. Additional agreements
+
+While using the Software under either Commercial or Personal License, You may choose to conclude an additional agreement to offer, and charge a fee for, services consistent with this Licence. However, in accepting such obligations, You may act only on your own behalf and on your sole responsibility, not on behalf of the original Licensor, and only if You agree to indemnify, defend, and hold Licensor harmless for any liability incurred by, or claims asserted against Licensor by the fact You have accepted any such warranty or additional liability.
+11. Export Restrictions
+
+The Software is of European Union origin and is subject to the European Union export laws and regulations. You agree to comply with all international, European Union and domestic export laws and regulations that apply to the Software, and not to export or re-export, directly or indirectly, the Software in violation of the export regulations.
+12. Miscellaneous
+
+Without prejudice of Article 10 above, the Licence represents the complete agreement between the Licensee and Licensor as to the Software licensed herein.
+
+This License Agreement is valid without Licensor's signature.
+
+If any provision of the Licence is invalid or unenforceable under applicable law, this will not affect the validity or enforceability of the Licence as a whole. Such provision will be construed and/or reformed so as necessary to make it valid and enforceable.
+ 
+End of Terms and conditions
