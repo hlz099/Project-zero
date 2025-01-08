@@ -1,0 +1,17 @@
+RPA-C is of European Union origin and is subject to the European Union export laws and regulations.
+
+Our products are generally available to the public by being sold, without restriction, at software resellers by means of electronic transactions. All versions of RPA-C are designed for installation by the user without further substantial support by the supplier.
+
+All versions of RPA-C are unclassified and qualify for export license exception according to the General Software Note (GSN) in Annex I to Council Regulation (EC) No 428/2009. Therefore, no license for either export or selling the product is required.
+
+This statement might be not valid for contract research and products developed under custom development agreements.
+
+Your local authorities may have other additional export control regulations.
+
+More information about the export of dual-use items from the EU can be found on following websites:
+
+- German Federal Office of Economics and Export Control (Bundesamt für Wirtschaft und Ausfuhrkontrolle - BAFA) | https://www.bafa.de/DE/Aussenwirtschaft/Ausfuhrkontrolle/ausfuhrkontrolle_node.html
+- Export controls on dual-use goods in EU | http://ec.europa.eu/trade/creating-opportunities/trade-topics/dual-use/
+- Council Regulation (EC) No 428/2009 | https://eur-lex.europa.eu/eli/reg/2009/428/oj
+
+ 
